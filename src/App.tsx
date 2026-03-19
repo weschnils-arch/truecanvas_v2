@@ -9,6 +9,7 @@ import { Studio } from './sections/Studio';
 import { Piercing } from './sections/Piercing';
 import { Process } from './sections/Process';
 import { Testimonials } from './sections/Testimonials';
+import { StudioReveal } from './sections/StudioReveal';
 import { FAQ } from './sections/FAQ';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
@@ -49,6 +50,7 @@ function HomePage() {
       <Piercing />
       <Process />
       <Testimonials />
+      <StudioReveal />
       <FAQ />
       <Contact />
       <Footer />

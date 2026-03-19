@@ -88,7 +88,7 @@ export default function ArtistsPage() {
               <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             {dropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-72 max-h-80 overflow-y-auto bg-paper border border-charcoal/10 py-2 z-50 shadow-lg">
+              <div className="absolute top-full left-0 mt-2 w-72 max-h-64 overflow-y-auto overscroll-contain bg-paper border border-charcoal/10 py-2 z-50 shadow-lg">
                 <button onClick={() => { setActiveStyle('Alle'); setDropdownOpen(false); }}
                   className={`block w-full text-left px-5 py-2.5 text-[11px] tracking-journal uppercase transition-colors ${activeStyle === 'Alle' ? 'text-charcoal bg-charcoal/5' : 'text-charcoal/60 hover:bg-charcoal/5 hover:text-charcoal'}`}>
                   Alle Stile

@@ -16,7 +16,7 @@ const guestArtists = [
   { name: 'vlada.s.tattoo', style: 'Floral / Botanisch', month: 'März', dates: '9.3. – 15.3.', image: '/images/guests/vlada.s.tattoo.webp', instagram: 'https://instagram.com/vlada.s.tattoo' },
 ];
 
-const allStyles = ['Alle Stile', ...tattooStylesConfig.styles.map(s => s.name)];
+const allStyles = tattooStylesConfig.styles.map(s => s.name);
 const allMonths = ['Alle Monate', 'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni'];
 
 export default function GuestArtists() {
@@ -102,7 +102,7 @@ export default function GuestArtists() {
               <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${monthDropdown ? 'rotate-180' : ''}`} />
             </button>
             {monthDropdown && (
-              <div className="absolute top-full left-0 mt-2 w-52 bg-paper border border-charcoal/10 py-2 z-50 shadow-lg">
+              <div className="absolute top-full left-0 mt-2 w-52 max-h-64 overflow-y-auto overscroll-contain bg-paper border border-charcoal/10 py-2 z-50 shadow-lg">
                 {allMonths.map(m => (
                   <button key={m} onClick={() => { setActiveMonth(m); setMonthDropdown(false); }}
                     className={`block w-full text-left px-5 py-2.5 text-[11px] tracking-journal uppercase transition-colors ${activeMonth === m ? 'text-charcoal bg-charcoal/5' : 'text-charcoal/60 hover:bg-charcoal/5 hover:text-charcoal'}`}>
@@ -121,7 +121,7 @@ export default function GuestArtists() {
               <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${styleDropdown ? 'rotate-180' : ''}`} />
             </button>
             {styleDropdown && (
-              <div className="absolute top-full left-0 mt-2 w-72 max-h-80 overflow-y-auto bg-paper border border-charcoal/10 py-2 z-50 shadow-lg">
+              <div className="absolute top-full left-0 mt-2 w-72 max-h-64 overflow-y-auto overscroll-contain bg-paper border border-charcoal/10 py-2 z-50 shadow-lg">
                 <button onClick={() => { setActiveStyle('Alle Stile'); setStyleDropdown(false); }}
                   className={`block w-full text-left px-5 py-2.5 text-[11px] tracking-journal uppercase transition-colors ${activeStyle === 'Alle Stile' ? 'text-charcoal bg-charcoal/5' : 'text-charcoal/60 hover:bg-charcoal/5 hover:text-charcoal'}`}>
                   Alle Stile
