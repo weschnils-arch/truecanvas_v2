@@ -31,7 +31,7 @@ export function StudioReveal() {
   }, []);
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-12 md:py-16">
       <div
         ref={imageRef}
         className="w-full overflow-hidden"

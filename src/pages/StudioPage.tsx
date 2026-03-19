@@ -116,7 +116,7 @@ export default function StudioPage() {
       {/* Full-bleed wide studio image with parallax */}
       <div ref={wideImageRef} className="w-full overflow-hidden mb-32 md:mb-40" style={{ height: '70vh' }}>
         <img
-          src="/images/studio/JollySchwarz-4211.webp"
+          src="/images/studio/JollySchwarz-4189.webp"
           alt="True Canvas Studio Lounge"
           className="w-full h-[120%] object-cover grayscale"
           loading="lazy"

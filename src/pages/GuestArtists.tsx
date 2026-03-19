@@ -69,11 +69,6 @@ export default function GuestArtists() {
           </div>
         </div>
 
-        {/* Atmospheric photo */}
-        <div className="mb-24 md:mb-32 overflow-hidden">
-          <img src="/images/studio/JollySchwarz-4173.webp" alt="True Canvas Studio" className="w-full aspect-[21/9] object-cover grayscale" loading="lazy" />
-        </div>
-
         {/* Style filter — horizontal scroll */}
         <div className="mb-6">
           <div className="overflow-x-auto scrollbar-hide -mx-6 px-6 md:-mx-12 md:px-12">
@@ -165,7 +160,7 @@ export default function GuestArtists() {
           {filtered.map((artist, i) => (
             <a key={i} href={artist.instagram} target="_blank" rel="noopener noreferrer" className="group">
               <div className="overflow-hidden mb-3">
-                <img src={artist.image} alt={artist.name} className="w-full aspect-square object-cover transition-all duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={artist.image} alt={artist.name} className="no-grayscale w-full aspect-square object-cover transition-all duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="flex items-start justify-between gap-2">
                 <div>

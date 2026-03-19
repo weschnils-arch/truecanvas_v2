@@ -10,6 +10,7 @@ import { Piercing } from './sections/Piercing';
 import { Process } from './sections/Process';
 import { Testimonials } from './sections/Testimonials';
 import { StudioReveal } from './sections/StudioReveal';
+import { StylesShowcase } from './sections/StylesShowcase';
 import { FAQ } from './sections/FAQ';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
@@ -24,6 +25,7 @@ import CareInstructionsPage from './pages/CareInstructionsPage';
 import BlogPage from './pages/BlogPage';
 
 import { siteConfig } from './config';
+import { SectionDivider } from './components/SectionDivider';
 import './App.css';
 
 function ScrollToTop() {
@@ -44,14 +46,23 @@ function HomePage() {
   return (
     <main className="relative w-full overflow-x-hidden">
       <Hero />
+      <SectionDivider />
       <IntroGrid />
+      <SectionDivider />
       <Services />
+      <SectionDivider />
       <Studio />
+      <SectionDivider />
       <Piercing />
+      <SectionDivider />
       <Process />
+      <SectionDivider />
       <Testimonials />
-      <StudioReveal />
+      <SectionDivider />
+      <StylesShowcase />
+      <SectionDivider />
       <FAQ />
+      <SectionDivider />
       <Contact />
       <Footer />
     </main>

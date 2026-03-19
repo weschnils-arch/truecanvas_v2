@@ -26,7 +26,7 @@ export function Contact() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="contact" className="py-32 md:py-48">
+    <section ref={sectionRef} id="contact" className="py-16 md:py-24">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="contact-content grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Map */}

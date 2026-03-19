@@ -61,7 +61,7 @@ export function Piercing() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="piercing" className="py-32 md:py-48">
+    <section ref={sectionRef} id="piercing" className="py-16 md:py-24">
       {/* Full-width Piercing Image with curtain reveal */}
       <div
         ref={imageWrapperRef}

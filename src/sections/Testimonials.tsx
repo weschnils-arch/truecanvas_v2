@@ -63,6 +63,8 @@ function StarRating({ count }: { count: number }) {
 
 export function Testimonials() {
   const sectionRef = useRef<HTMLElement>(null);
+  const imageWrapperRef = useRef<HTMLDivElement>(null);
+  const innerImageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -90,13 +92,31 @@ export function Testimonials() {
           once: true,
         },
       });
+
+      // Parallax on studio image
+      if (innerImageRef.current && imageWrapperRef.current) {
+        gsap.fromTo(
+          innerImageRef.current,
+          { yPercent: -8 },
+          {
+            yPercent: 8,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: imageWrapperRef.current,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+            },
+          }
+        );
+      }
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-32 md:py-48 bg-[#EDECE9]">
+    <section ref={sectionRef} className="pt-16 md:pt-24 bg-[#EDECE9]">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20">
         {/* Heading */}
         <div className="testimonials-heading mb-16 md:mb-24">
@@ -138,6 +158,18 @@ export function Testimonials() {
         <p className="text-[10px] tracking-journal uppercase text-charcoal/60 mt-12 text-center">
           Basierend auf Google Rezensionen
         </p>
+
+      </div>
+
+      {/* Full-bleed Image with parallax */}
+      <div ref={imageWrapperRef} className="w-full overflow-hidden aspect-[16/7] md:aspect-[21/9] mt-16 md:mt-24">
+        <img
+          ref={innerImageRef}
+          src="/images/studio/JollySchwarz-4003.webp"
+          alt="TrueCanvas Studio"
+          loading="lazy"
+          className="w-full h-[120%] object-cover"
+        />
       </div>
     </section>
   );

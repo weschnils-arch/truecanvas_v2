@@ -40,7 +40,7 @@ export function Services() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-32 md:py-48">
+    <section ref={sectionRef} className="py-16 md:py-24">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20">
         {/* Subtitle */}
         <p className="services-subtitle text-[11px] tracking-archive uppercase text-charcoal/70 mb-20 md:mb-28">

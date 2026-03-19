@@ -50,7 +50,7 @@ export function Studio() {
   const descriptionParts = studioConfig.description.split('\n\n');
 
   return (
-    <section ref={sectionRef} id="studio" className="py-32 md:py-48">
+    <section ref={sectionRef} id="studio" className="py-16 md:py-24">
       {/* Full-bleed Image */}
       <div ref={imageRef} className="w-full overflow-hidden aspect-[16/7] md:aspect-[21/9]">
         <img

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SectionDivider } from '../components/SectionDivider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,21 +60,7 @@ export default function TattooRemovalPage() {
         </div>
       </div>
 
-      {/* Full-width image with curtain reveal */}
-      <div className="flex justify-center mb-32 md:mb-40">
-        <div
-          ref={imageRef}
-          className="w-full overflow-hidden"
-          style={{ clipPath: 'inset(0 50% 0 50%)' }}
-        >
-          <img
-            src="/images/studio/JollySchwarz-4253.webp"
-            alt="True Canvas Studio"
-            className="w-full aspect-[21/9] object-cover object-center grayscale"
-            loading="lazy"
-          />
-        </div>
-      </div>
+      <SectionDivider />
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
 
@@ -128,6 +115,26 @@ export default function TattooRemovalPage() {
             </div>
           </div>
         </div>
+
+        <SectionDivider />
+
+        {/* Full-width image with curtain reveal */}
+        <div className="mb-32 md:mb-40">
+          <div
+            ref={imageRef}
+            className="w-full overflow-hidden"
+            style={{ clipPath: 'inset(0 50% 0 50%)' }}
+          >
+            <img
+              src="/images/studio/JollySchwarz-4253.webp"
+              alt="True Canvas Studio"
+              className="w-full aspect-[21/9] object-cover object-center grayscale"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <SectionDivider />
 
         {/* Contact */}
         <div className="text-center mb-16 border-t border-charcoal/10 pt-16">

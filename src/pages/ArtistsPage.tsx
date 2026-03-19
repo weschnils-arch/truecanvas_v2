@@ -42,11 +42,6 @@ export default function ArtistsPage() {
           </div>
         </div>
 
-        {/* Atmospheric photo */}
-        <div className="mb-24 md:mb-32 overflow-hidden">
-          <img src="/images/studio/JollySchwarz-4211.webp" alt="True Canvas Studio" className="w-full aspect-[21/9] object-cover grayscale" loading="lazy" />
-        </div>
-
         {/* Filters */}
         <div className="mb-12">
           {/* Horizontal scroll pills */}
@@ -144,10 +139,15 @@ export default function ArtistsPage() {
           <p className="text-center py-20 font-serif italic text-charcoal/60">Keine Artists in diesem Stil gefunden.</p>
         )}
 
+        {/* Full-width atmospheric photo */}
+        <div className="mt-32 md:mt-40 overflow-hidden">
+          <img src="/images/studio/JollySchwarz-4185.webp" alt="True Canvas Studio" className="w-full aspect-[21/9] object-cover" loading="lazy" />
+        </div>
+
         {/* Bottom photos */}
-        <div className="mt-32 md:mt-40 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="overflow-hidden"><img src="/images/studio/JollySchwarz-4295.webp" alt="Studio" className="w-full aspect-square object-cover grayscale" loading="lazy" /></div>
-          <div className="overflow-hidden md:mt-16"><img src="/images/studio/JollySchwarz-4112.webp" alt="Studio" className="w-full aspect-square object-cover grayscale" loading="lazy" /></div>
+        <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="overflow-hidden"><img src="/images/studio/JollySchwarz-4295.webp" alt="Studio" className="w-full aspect-square object-cover" loading="lazy" /></div>
+          <div className="overflow-hidden md:mt-16"><img src="/images/studio/JollySchwarz-4134.webp" alt="Studio" className="w-full aspect-square object-cover" loading="lazy" /></div>
         </div>
 
         {/* CTA */}

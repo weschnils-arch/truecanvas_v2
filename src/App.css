@@ -36,10 +36,16 @@ html.lenis, html.lenis body {
   color: inherit;
 }
 
-/* Image loading fade */
+/* Image loading fade + global grayscale */
 img {
   transition: opacity 0.6s ease;
   opacity: 1;
+  filter: grayscale(100%);
+}
+
+/* Keep guest artist preview images in color */
+img.no-grayscale {
+  filter: none;
 }
 
 /* Custom scrollbar for desktop — thin, charcoal */
